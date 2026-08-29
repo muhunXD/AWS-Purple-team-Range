@@ -10,7 +10,7 @@ gets caught.
 ## Why this exists
 
 This was built on top of a personal AWS landing zone project, specifically to test whether that
-landing zone's Service Control Policies actually stop anything — rather than just trusting that
+landing zone's Service Control Policies actually stop anything rather than just trusting that
 attaching a policy means it works. Seven attack techniques were detonated for real, five of the
 landing zone's six SCPs were proven with actual denied-API-call evidence, and every detection here
 was validated against a real CloudTrail event, not a hypothetical one.
@@ -64,7 +64,7 @@ Two independent Terraform stacks: `terraform/target/` (the attack surface) and
 ## How to reproduce
 
 You'll need your own AWS sandbox account sitting inside an AWS Organization with SCPs similar to
-the ones in `evidence/scp-findings.md` (the prevention half of the results depends on those — the
+the ones in `evidence/scp-findings.md` (the prevention half of the results depends on those.The
 detection half works against any account with CloudTrail enabled). Then:
 
 1. Apply both Terraform stacks — see [terraform/README.md](terraform/README.md) for the exact
@@ -75,17 +75,9 @@ detection half works against any account with CloudTrail enabled). Then:
    each one fires.
 4. Run Prowler before and after to get your own baseline/after comparison.
 
-## What I'd do next
-
-Harden the responder Lambda's own IAM permissions (currently broader than it needs), chase down
-the CloudWatch CIS findings from the Prowler baseline, turn on AWS Config and Security Hub (neither
-is enabled yet), wire up live alarms for the four techniques that are currently retrospective-query
-only, and get a more rigorous GuardDuty comparison across all seven techniques instead of just one.
-Full list: [docs/overview.md](docs/overview.md#honest-gaps--what-id-do-next).
-
 ## Disclaimer
 
 Built and run entirely against a sandbox AWS account I own. Stratus Red Team is a public,
-open-source attack-simulation tool — no exploit code was authored for this project. Account IDs,
+open-source attack-simulation tool no exploit code was authored for this project. Account IDs,
 organization IDs, policy IDs, and any credentials or passwords that appeared in raw tool output
 have been redacted throughout this repo before publishing.
