@@ -1,0 +1,7 @@
+2026/08/27 00:41:07 Checking your authentication against AWS
+2026/08/27 00:41:19 Not warming up - aws.privilege-escalation.iam-update-user-login-profile is already warm. Use --force to force
+2026/08/27 00:41:19 Changing console password for IAM user stratus-red-team-update-login-profile-user
+2026/08/27 00:41:21 Updated console password for user
+2026/08/27 00:41:21 You can log in at: https://<SANDBOX_ACCOUNT_ID>.signin.aws.amazon.com/console
+2026/08/27 00:41:21 User name: stratus-red-team-update-login-profile-user
+2026/08/27 00:41:21 Password: <REDACTED_PASSWORD>

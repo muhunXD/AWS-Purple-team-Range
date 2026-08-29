@@ -1,0 +1,3 @@
+2026/08/20 21:42:07 Checking your authentication against AWS
+2026/08/20 21:42:25 Not warming up - aws.exfiltration.ec2-share-ebs-snapshot is already warm. Use --force to force
+2026/08/20 21:42:25 Sharing the volume snapshot snap-05a70a81ced39e78d with an external AWS account...

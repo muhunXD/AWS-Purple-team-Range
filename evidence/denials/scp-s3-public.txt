@@ -1,0 +1,2 @@
+
+aws: [ERROR]: An error occurred (AccessDenied) when calling the PutPublicAccessBlock operation: User: arn:aws:sts::<SANDBOX_ACCOUNT_ID>:assumed-role/AWSReservedSSO_AdministratorAccess_8c8dbb6dc8164670/admin is not authorized to perform: s3:PutAccountPublicAccessBlock with an explicit deny in a service control policy: arn:aws:organizations::<MANAGEMENT_ACCOUNT_ID>:policy/<ORG_ID>/service_control_policy/<POLICY_ID>

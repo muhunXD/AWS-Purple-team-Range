@@ -1,0 +1,4 @@
+2026/08/20 21:26:53 Checking your authentication against AWS
+2026/08/20 21:27:08 Not warming up - aws.persistence.iam-backdoor-user is already warm. Use --force to force
+2026/08/20 21:27:08 Creating access key on legit IAM user to simulate backdoor
+2026/08/20 21:27:09 Successfully created access key <REDACTED_KEY>

@@ -1,0 +1,2 @@
+
+aws: [ERROR]: An error occurred (AccessDeniedException) when calling the LeaveOrganization operation: You don't have permissions to access this resource.

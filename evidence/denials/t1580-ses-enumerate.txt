@@ -1,0 +1,7 @@
+2026/08/26 23:25:27 Checking your authentication against AWS
+2026/08/26 23:25:39 Checking if SES email sending is enabled in the current region
+2026/08/26 23:25:40 SES email sending is enabled
+2026/08/26 23:25:40 Enumerating verified SES identities using ses:ListIdentities
+2026/08/26 23:25:40 No verified SES identities found
+2026/08/26 23:25:40 Enumerating SES quotas
+2026/08/26 23:25:40 Current quotas: max24hoursend: 200, maxsendrate: 1, sentlast24hours: 0
