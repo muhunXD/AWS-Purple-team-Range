@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 288" width="1160" height="288" role="img" aria-labelledby="diagTitle diagDesc">
+<title id="diagTitle">aws-purple-range: attack, detect, respond pipeline</title>
+<desc id="diagDesc">A four-stage pipeline. Stratus Red Team detonates an ATT&amp;CK technique; CloudTrail's multi-region trail records the API call; CloudWatch metric filters and alarms detect it; response is either the responder Lambda via SNS or an analyst Logs Insights query. The trail, log group, metric filters, alarms, SNS, and responder Lambda are all defined in the terraform/logging stack.</desc>
+ 
+<rect x="0.5" y="0.5" width="1159" height="287" rx="14" fill="#F9FAFB" stroke="#E4E7EC"/>
+ 
+<text x="28" y="42" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#101828">Attack &#8594; detect &#8594; respond</text>
+<text x="28" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#667085">aws-purple-range &#183; Stratus Red Team detonation through to automated response</text>
+ 
+<rect x="24" y="88" width="236" height="104" rx="10" fill="#FEF3F2" stroke="#FECDCA"/>
+<text x="42" y="112" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#B42318">01 &#183; ATTACK</text>
+<text x="42" y="137" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101828">Stratus Red Team</text>
+<text x="42" y="158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">Detonates a real MITRE</text>
+<text x="42" y="175" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">ATT&amp;CK technique</text>
+ 
+<rect x="316" y="88" width="236" height="104" rx="10" fill="#EFF8FF" stroke="#B2DDFF"/>
+<text x="334" y="112" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#175CD3">02 &#183; LOG</text>
+<text x="334" y="137" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101828">CloudTrail</text>
+<text x="334" y="158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">Multi-region trail captures</text>
+<text x="334" y="175" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">the API call</text>
+ 
+<rect x="608" y="88" width="236" height="104" rx="10" fill="#FFFAEB" stroke="#FEDF89"/>
+<text x="626" y="112" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#B54708">03 &#183; DETECT</text>
+<text x="626" y="137" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101828">CloudWatch</text>
+<text x="626" y="158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">Logs group + metric filters</text>
+<text x="626" y="175" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">and alarms</text>
+ 
+<rect x="900" y="88" width="236" height="104" rx="10" fill="#ECFDF3" stroke="#A6F4C5"/>
+<text x="918" y="112" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#027A48">04 &#183; RESPOND</text>
+<text x="918" y="137" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101828">Response</text>
+<text x="918" y="158" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">SNS &#8594; responder Lambda,</text>
+<text x="918" y="175" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#475467">or analyst query</text>
+ 
+<line x1="268" y1="140" x2="300" y2="140" stroke="#98A2B3" stroke-width="2"/>
+<polygon points="300,134 310,140 300,146" fill="#98A2B3"/>
+<line x1="560" y1="140" x2="592" y2="140" stroke="#98A2B3" stroke-width="2"/>
+<polygon points="592,134 602,140 592,146" fill="#98A2B3"/>
+<line x1="852" y1="140" x2="884" y2="140" stroke="#98A2B3" stroke-width="2"/>
+<polygon points="884,134 894,140 884,146" fill="#98A2B3"/>
+ 
+<rect x="24" y="204" width="236" height="26" rx="6" fill="#FFFFFF" stroke="#D0D5DD" stroke-dasharray="4 3"/>
+<text x="142" y="221" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" font-size="11" fill="#667085">external tool</text>
+<rect x="316" y="204" width="820" height="26" rx="6" fill="#FFFFFF" stroke="#E4E7EC"/>
+<text x="726" y="221" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace" font-size="11" fill="#475467">terraform/logging/ &#8212; trail, log group, metric filters, alarms, SNS, responder Lambda</text>
+ 
+<line x1="24" y1="252" x2="1136" y2="252" stroke="#E4E7EC"/>
+<text x="24" y="272" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#667085"></text>
+</svg>

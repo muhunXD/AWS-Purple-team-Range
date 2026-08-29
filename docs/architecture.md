@@ -12,15 +12,7 @@ or vice versa. See `terraform/README.md` for the exact apply order and provider 
 
 ## Attack → detect → respond flow
 
-```
- Stratus Red Team                CloudTrail                 CloudWatch                 Response
- (attack technique)         →    (multi-region trail)  →    (Logs group +          →   (SNS → Lambda,
-                                                              metric filters/alarms)      or analyst query)
-
- e.g. CreateAccessKey             event delivered to          metric filter matches       range-responder
- on another IAM user              /aws/cloudtrail/range        eventName, alarm fires      deactivates the
-                                                                (range-access-key-created)  new key via IAM
-```
+![Attack, detect, respond pipeline: Stratus Red Team detonates a MITRE ATT&CK technique; CloudTrail's multi-region trail captures the API call; CloudWatch metric filters and alarms detect it; response is the responder Lambda via SNS or an analyst query. Worked example: CreateAccessKey on another IAM user lands in /aws/cloudtrail/range, fires the range-access-key-created alarm, and range-responder deactivates the key via iam:UpdateAccessKey.](images/architecture.svg)
 
 Three of the seven detonated techniques have a **live alarm** wired all the way to SNS:
 

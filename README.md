@@ -44,9 +44,7 @@ Full detail, methodology, and the Prowler before/after comparison: **[docs/resul
 
 ## Architecture
 
-```
-Stratus Red Team → CloudTrail → CloudWatch (Logs + metric filters/alarms) → SNS → Lambda / analyst
-```
+![Attack, detect, respond pipeline: Stratus Red Team detonates a MITRE ATT&CK technique; CloudTrail's multi-region trail captures the API call; CloudWatch metric filters and alarms detect it; response is the responder Lambda via SNS or an analyst query. Worked example: CreateAccessKey on another IAM user lands in /aws/cloudtrail/range, fires the range-access-key-created alarm, and range-responder deactivates the key via iam:UpdateAccessKey.](docs/images/architecture.svg)
 
 Two independent Terraform stacks: `terraform/target/` (the attack surface) and
 `terraform/logging/` (CloudTrail, alarms, the responder Lambda). Full diagram and detail:
